@@ -1,0 +1,107 @@
+* {
+	font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	padding: 1rem;
+	min-height: 100svh;
+	background-color: hsl(218, 23%, 16%);
+}
+
+.card {
+	margin: auto;
+	position: relative;
+	width: fit-content;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	text-align: center;
+	max-width: 530px;
+	position: relative;
+	background-color: hsl(217, 19%, 24%);
+}
+
+.card__advice-title {
+	display: inline;
+	font-size: 0.95em;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	color: hsl(150, 100%, 66%);
+}
+
+.card__advice {
+	font-weight: 800;
+	font-size: 1.75em;
+	margin-top: 1.25rem;
+	color: hsl(193, 38%, 86%);
+}
+
+.card__divider-mobile,
+.card__divider-desktop {
+	width: 100%;
+	padding: 1.5rem 0 3rem;
+}
+
+.card__divider-desktop {
+	display: none;
+}
+
+.card__button {
+	position: absolute;
+	bottom: -2rem;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	padding: 1.5rem;
+	border: none;
+	cursor: pointer;
+	width: fit-content;
+	border-radius: 100%;
+	background-color: hsl(150, 100%, 66%);
+	transition: box-shadow 0.25s ease;
+}
+
+.card__button:hover {
+	box-shadow: 0px 0px 1.5rem 0.2rem hsl(150, 100%, 66%);
+}
+
+.card__button.paused {
+	background-color: hsl(193, 38%, 86%);
+	cursor: not-allowed;
+	box-shadow: none;
+}
+
+.attribution {
+	margin-top: 3rem;
+	color: hsl(193, 38%, 86%);
+	font-size: 14px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 720px) {
+	.card {
+		padding: 2.5rem;
+	}
+
+	.card__divider-mobile,
+	.card__divider-desktop {
+		padding: 1.5rem 0 2rem;
+	}
+
+	.card__divider-mobile {
+		display: none;
+	}
+
+	.card__divider-desktop {
+		display: initial;
+	}
+}
